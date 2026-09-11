@@ -1,78 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>KDC FIRE - NO FEAR NO LIMITS</title>
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KDC FIRE MALL - BASE64 - NO UPLOAD NEEDED</title>
 <script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@700;900&display=swap" rel="stylesheet">
-<style>
-body{font-family:Inter;background:#070707;color:#fff}
-.anton{font-family:Anton}
-.doodle{background-image:url('https://www.transparenttextures.com/patterns/dark-mosaic.png');opacity:0.04;position:fixed;inset:0;pointer-events:none}
-</style>
-</head>
-<body>
-<div class="doodle"></div>
-<div class="w-full bg-[#111] text-center py-2.5 text-[11px] tracking-widest text-white/60">FREE SHIPPING ON ORDERS OVER $100 • RETURNS WITHIN 30 DAYS</div>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@900&display=swap" rel="stylesheet">
+<style>body{font-family:Inter;background:#050505;color:#fff}.anton{font-family:Anton}</style>
+</head><body>
+<div class="bg-[#ff6a00] text-black text-center py-2 font-black text-[10px]">BASE64 EDITION - NO UPLOAD NEEDED - GCASH 09150343154 - PAYONEER brodix8@gmail.com</div>
+<nav class="max-w-[1350px] mx-auto px-6 py-4 flex justify-between"><div class="anton text-[28px]">🔥KDC FIRE MALL</div><button onclick="openCart()" class="bg-white text-black px-6 py-2.5 rounded-full font-black text-[11px]">🛒 CART <span id="cnt">0</span></button></nav>
+<div class="max-w-[1350px] mx-auto px-6 mt-6 grid md:grid-cols-2 gap-6">
+<div><h1 class="anton text-[60px] leading-[0.85]">NO FEAR<br><span class="text-[#ff6a00]">NO LIMITS</span></h1><p class="text-[12px] opacity-60 mt-3">BASE64 - pics embedded! Isang paste lang! Ikaw model Brod!</p><button onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="mt-5 bg-white text-black px-8 py-3 rounded-full font-black">SHOP 12 STORES →</button></div>
+<div><img id="heroImg" class="w-full h-[500px] object-cover rounded-[24px] border border-white/10"></div>
+</div>
+<div class="max-w-[1350px] mx-auto px-6 mt-10 grid md:grid-cols-2 gap-6"><div class="bg-[#111] border border-white/10 rounded-[24px] p-6"><div class="anton text-[22px]">BROD FOUNDER - BASE64</div><div class="text-[11px] opacity-60 mt-2">Hindi mo na need mag upload ng pics sa GitHub! Kasama na sa code! 12 stores • 36 colors • GCash 09150343154 • Payoneer brodix8@gmail.com</div></div><div><img id="aboutImg" class="w-full h-[300px] object-cover rounded-[24px] border border-white/10"></div></div>
+<div id="shop" class="max-w-[1350px] mx-auto px-6 mt-10"><div class="font-black text-[13px] mb-4">🏬 KDC MALL - 12 STORES • MAMILI NA BOSS!</div><div id="grid" class="grid md:grid-cols-4 gap-4"></div></div>
+<div class="mt-16 border-t border-white/10 bg-[#111] py-8 text-center"><div class="anton">KDC FIRE MALL - BASE64 EDITION</div><div class="text-[10px] opacity-50">© 2024 Brod • GCash 09150343154 • Payoneer brodix8@gmail.com • No upload needed!</div></div>
 
-<nav class="max-w-[1300px] mx-auto px-6 py-4 flex justify-between items-center relative z-10">
-<div class="flex items-center gap-2"><span class="text-[28px]">🔥</span><span class="anton text-[38px] tracking-wider">KDC</span></div>
-<div class="hidden md:flex gap-8 text-[14px] font-bold tracking-wide"><span>SHOP</span><span>COLLECTIONS</span><span>NEW DROP</span><span>ABOUT</span><span>SUPPORT</span></div>
-<div class="flex gap-5 text-[20px]"><span>⌕</span><span>◯</span><span>🛒<sup class="bg-white text-black text-[9px] px-1 rounded-full ml-1">0</sup></span></div>
-</nav>
+<div id="m" class="fixed inset-0 bg-black/90 z-[99] hidden items-center justify-center p-4"><div class="bg-[#151515] border border-white/10 rounded-[24px] max-w-[400px] w-full p-6"><div class="flex justify-between"><div id="n" class="font-black"></div><button onclick="cl()" class="bg-white/10 w-8 h-8 rounded-full">✕</button></div><div id="img" class="h-[200px] bg-[#0e0e0e] rounded-xl mt-4 overflow-hidden"></div><div id="cols" class="flex gap-2 mt-3 flex-wrap"></div><div class="grid grid-cols-5 gap-2 mt-3"><button onclick="pk(this,'XS')" class="sBtn border border-white/20 rounded-full py-2 text-[11px]">XS</button><button onclick="pk(this,'S')" class="sBtn border border-white/20 rounded-full py-2">S</button><button onclick="pk(this,'M')" class="sBtn bg-white text-black rounded-full py-2 font-black">M</button><button onclick="pk(this,'L')" class="sBtn border border-white/20 rounded-full py-2">L</button><button onclick="pk(this,'XL')" class="sBtn border border-white/20 rounded-full py-2">XL</button></div><button onclick="addC()" class="mt-4 w-full bg-white text-black rounded-full py-3 font-black text-[11px]">🛒 ADD TO CART</button><button onclick="buy()" class="mt-2 w-full bg-[#0074ff] rounded-full py-3 font-black text-[11px]">📱 GCASH 09150343154 + WA DIRECT</button></div></div>
 
-<div class="max-w-[1300px] mx-auto px-6 mt-2 grid md:grid-cols-[180px_1fr] gap-4 relative z-10">
-<div class="hidden md:block">
-<div style="background:radial-gradient(circle,#ff7a00,#ff4d00);border:3px solid #000;transform:rotate(-6deg);box-shadow:4px 4px 0 #fff" class="p-2 w-[155px] text-black">
-<div class="font-black text-[22px] leading-none flex items-center gap-1">🔥FIRE</div><div class="font-black text-[22px] leading-none">EDITION</div>
-<div class="text-[8px] font-bold mt-2 border-t border-black pt-1">OCT 2024 — LIMITED DROP</div>
-</div>
-</div>
-<div class="text-center md:pr-[180px]">
-<div class="anton text-[28px]">KDC</div>
-<h1 class="anton text-[54px] md:text-[92px] leading-[0.85] tracking-tight">NO FEAR NO LIMITS</h1>
-<p class="mt-4 tracking-[4px] text-[13px] text-white/50">BORN IN THE STREETS. BUILT WITHOUT LIMITS.</p>
-<div class="mt-8 flex flex-wrap justify-center gap-3">
-<a href="#shop" class="bg-white text-black px-8 py-3.5 rounded-full font-black text-[14px]">SHOP COLLECTION →</a>
-<a href="#shop" class="border border-white/30 px-8 py-3.5 rounded-full font-bold text-[14px]">LOOKBOOK</a>
-</div>
-</div>
-</div>
-
-<div class="max-w-[1300px] mx-auto px-6 mt-16 relative z-10">
-<div class="border-t border-white/10 pt-6 mb-5 flex justify-between"><span class="font-black tracking-widest text-[13px]">🔥 FEATURED DROP — 06 PIECES</span><span class="text-[10px] text-white/30">GCash: 09150343154 • Payoneer: brodix8@gmail.com</span></div>
-<div id="grid" class="grid md:grid-cols-3 gap-5"></div>
-</div>
-
-<div id="modal" class="fixed inset-0 bg-black/90 z-[999] hidden items-center justify-center p-4"><div class="bg-[#151515] border border-white/10 rounded-[24px] max-w-[400px] w-full p-6"><div class="flex justify-between"><div><div id="mName" class="font-black text-[16px]"></div><div id="mPrice" class="text-[11px] opacity-50"></div></div><button onclick="closeM()" class="opacity-50 text-xl">✕</button></div><div class="mt-5 grid grid-cols-4 gap-2"><button onclick="pick(this,'S')" class="sBtn border border-white/10 rounded-full py-2.5 text-[12px] font-bold">S</button><button onclick="pick(this,'M')" class="sBtn border rounded-full py-2.5 text-[12px]">M</button><button onclick="pick(this,'L')" class="sBtn border border-white/10 rounded-full py-2.5 text-[12px]">L</button><button onclick="pick(this,'XL')" class="sBtn border border-white/10 rounded-full py-2.5 text-[12px]">XL</button></div><div class="mt-6 grid gap-2"><button onclick="payG()" class="bg-[#0074ff] rounded-full py-3.5 font-black text-[11px]">📱 GCASH - 09150343154 (PH)</button><button onclick="payP()" class="bg-[#ff5500] rounded-full py-3.5 font-black text-[11px]">🌍 PAYONEER - brodix8@gmail.com (WORLDWIDE)</button><button onclick="payW()" class="bg-[#25D366] text-black rounded-full py-3.5 font-black text-[11px]">💬 WHATSAPP DIRECT</button></div></div></div>
+<div id="cartM" class="fixed inset-0 bg-black/90 z-[100] hidden items-center justify-center p-4"><div class="bg-[#151515] border border-white/10 rounded-[24px] max-w-[400px] w-full p-6 max-h-[90vh] overflow-auto"><div class="flex justify-between"><div class="font-black">🏬 CART <span id="cNum">0</span></div><button onclick="closeCart()" class="bg-white/10 w-8 h-8 rounded-full">✕</button></div><div id="cItems" class="mt-4 grid gap-2"></div><div class="mt-4 border-t border-white/10 pt-4"><div id="tot" class="font-black"></div><button onclick="chkG()" class="mt-3 w-full bg-[#0074ff] rounded-full py-3 font-black text-[11px]">📱 CHECKOUT GCASH → 09150343154</button><button onclick="chkP()" class="mt-2 w-full bg-[#ff5500] rounded-full py-3 font-black text-[11px]">🌍 PAYONEER → brodix8@gmail.com</button><button onclick="clearC()" class="mt-2 w-full border border-white/10 rounded-full py-2 text-[10px] opacity-50">CLEAR CART</button></div></div></div>
 
 <script>
-let cur=null,size=''; const WA="639150343154"; const GC="09150343154"; const PO="brodix8@gmail.com";
-const prods=[
-{n:"KDC OVERSIZED HOODIE",p:98,img:"https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=500"},
-{n:"UTILITY CARGO PANTS",p:110,img:"https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=500"},
-{n:"KDC BUCKET HAT",p:42,img:"https://images.unsplash.com/photo-1521369909029-2afed882baee?w=500"},
-{n:"FLAME GRAPHIC TEE",p:48,img:"https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=500"},
-{n:"CHUNKY SNEAKERS",p:145,img:"https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=500"},
-{n:"TACTICAL SLING BAG",p:65,img:"https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=500"}
+// BASE64 IMAGES - EMBEDDED - NO UPLOAD NEEDED!
+const brod1B64 = "PASTE_BROD1_HERE";
+const brod2B64 = "PASTE_BROD2_HERE";
+const brod1 = "data:image/jpeg;base64," + brod1B64;
+const brod2 = "data:image/jpeg;base64," + brod2B64;
+
+document.getElementById('heroImg').src = brod1;
+document.getElementById('aboutImg').src = brod2;
+
+let cur=null,sz='M',col='BLACK',cart=JSON.parse(localStorage.getItem('kdcB64')||'[]');const WA="639150343154";
+const items=[
+{n:"KDC TANK TOP - FIRE (SUOT NI BROD)",p:48,c:"tee",cols:["BLACK","WHITE","RED"],img:brod2},
+{n:"CARGO PANTS TACTICAL (SUOT NI BROD)",p:110,c:"pants",cols:["BLACK","CAMO","KHAKI"],img:brod1},
+{n:"OVERSIZED HOODIE",p:98,c:"hoodie",cols:["BLACK","WHITE","ORANGE"],img:"https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=500"},
+{n:"FIRE HOODIE",p:105,c:"hoodie",cols:["BLACK","RED","ORANGE"],img:"https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=500"},
+{n:"CARGO JOGGER",p:95,c:"pants",cols:["BLACK","GREY","KHAKI"],img:"https://images.unsplash.com/photo-1542272604-787c3835535d?w=500"},
+{n:"CARGO SHORTS",p:58,c:"pants",cols:["BLACK","CAMO","KHAKI"],img:"https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=500"},
+{n:"FLAME SKULL TEE",p:48,c:"tee",cols:["BLACK","WHITE","RED"],img:"https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=500"},
+{n:"NO FEAR TEE",p:42,c:"tee",cols:["BLACK","WHITE","ORANGE"],img:"https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500"},
+{n:"BUCKET HAT",p:42,c:"acc",cols:["BLACK","WHITE","ORANGE"],img:"https://images.unsplash.com/photo-1533827432537-70133748f5c8?w=600"},
+{n:"SNAPBACK CAP",p:35,c:"acc",cols:["BLACK","RED","WHITE"],img:"https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=500"},
+{n:"CHUNKY SNEAKERS",p:145,c:"acc",cols:["BLACK","WHITE"],img:"https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500"},
+{n:"SLING BAG",p:65,c:"acc",cols:["BLACK","CAMO","GREY"],img:"https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=500"}
 ];
-document.getElementById('grid').innerHTML=prods.map(x=>`
-<div class="bg-[#121212] border border-white/10 rounded-xl overflow-hidden hover:border-white/20">
-<div class="h-[320px] bg-[#0e0e0e] relative flex items-center justify-center">
-<span class="absolute top-3 left-3 bg-[#f5c6a5] text-black text-[8px] font-black px-2 py-1 rounded">NEW</span>
-<img src="${x.img}" class="h-full w-full object-cover opacity-80">
-<div class="absolute bottom-0 w-full bg-[#111]/90 backdrop-blur py-3 text-center">
-<div class="font-bold text-[13px]">${x.n}</div><div class="text-[12px] opacity-50">$${x.p}.00 • GCash / Payoneer</div>
-</div></div>
-<div class="p-3"><button onclick="openM('${x.n}',${x.p})" class="w-full bg-white text-black rounded-full py-3 font-black text-[11px] tracking-wider">ORDER NOW - GCASH / PAYONEER / WA</button></div>
-</div>`).join('');
-function openM(n,p){cur={n,p};document.getElementById('mName').innerText=n;document.getElementById('mPrice').innerText=`$${p}.00 - GCash: ${GC} | Payoneer: ${PO}`;document.getElementById('modal').classList.remove('hidden');document.getElementById('modal').classList.add('flex');size='';document.querySelectorAll('.sBtn').forEach(b=>b.classList.remove('bg-white','text-black'))}
-function closeM(){document.getElementById('modal').classList.add('hidden')}
-function pick(el,s){size=s;document.querySelectorAll('.sBtn').forEach(b=>b.classList.remove('bg-white','text-black'));el.classList.add('bg-white','text-black')}
-function chk(){if(!size){alert('Pili size muna boss S M L XL');return 0}return 1}
-function payG(){if(!chk())return;window.open(`https://wa.me/${WA}?text=Boss KDC FIRE! GCASH ORDER %0A${cur.n} Size ${size} $${cur.p} GCash ${GC}`,'_blank')}
-function payP(){if(!chk())return;window.open(`https://wa.me/${WA}?text=Hello KDC! PAYONEER ORDER ${cur.n} Size ${size} $${cur.p} USD Email ${PO}`,'_blank')}
-function payW(){if(!chk())return;window.open(`https://wa.me/${WA}?text=Boss inquiry ${cur.n} Size ${size}`,'_blank')}
-</script>
-</body>
-</html>
+function render(){document.getElementById('grid').innerHTML=items.map((x,i)=>`<div class="bg-[#121212] border border-white/10 rounded-2xl overflow-hidden"><div class="h-[240px] relative"><img src="${x.img}" class="w-full h-full object-cover"><div class="absolute bottom-0 w-full bg-gradient-to-t from-black p-3"><div class="font-bold text-[11px]">${x.n}</div><div class="text-[9px] opacity-60">$${x.p} • ${x.cols.join('/')}</div></div></div><div class="p-3"><button onclick="op(${i})" class="w-full bg-white text-black rounded-full py-3 font-black text-[10px]">CHOOSE COLOR & SIZE →</button></div></div>`).join('')}
+function op(i){cur=items[i];document.getElementById('n').innerText=cur.n;document.getElementById('img').innerHTML=`<img src="${cur.img}" class="w-full h-full object-cover">`;document.getElementById('cols').innerHTML=cur.cols.map(c=>`<button onclick="pkC(this,'${c}')" class="cBtn ${c=='BLACK'?'bg-white text-black':''} border border-white/20 px-3 py-1.5 rounded-full text-[10px] font-black">${c}</button>`).join('');document.getElementById('m').classList.remove('hidden');document.getElementById('m').classList.add('flex')}
+function cl(){document.getElementById('m').classList.add('hidden')}
+function pk(el,s){sz=s;document.querySelectorAll('.sBtn').forEach(b=>b.classList.remove('bg-white','text-black'));el.classList.add('bg-white','text-black')}
+function pkC(el,c){col=c;document.querySelectorAll('.cBtn').forEach(b=>b.classList.remove('bg-white','text-black'));el.classList.add('bg-white','text-black')}
+function addC(){cart.push({n:cur.n,p:cur.p,s:sz,c:col});localStorage.setItem('kdcB64',JSON.stringify(cart));upC();cl();openCart()}
+function upC(){document.getElementById('cnt').innerText=cart.length;document.getElementById('cNum').innerText=cart.length;document.getElementById('tot').innerText="TOTAL $"+cart.reduce((a,b)=>a+b.p,0);document.getElementById('cItems').innerHTML=cart.length?cart.map((c,i)=>`<div class="bg-black border border-white/10 rounded-xl p-3 flex justify-between"><div><div class="font-bold text-[11px]">${c.n}</div><div class="text-[9px] opacity-50">${c.c}/${c.s}</div></div><button onclick="rm(${i})" class="opacity-30">✕</button></div>`).join(''):`<div class="text-center py-8 opacity-30 text-[11px]">Empty pa!</div>`}
+function rm(i){cart.splice(i,1);localStorage.setItem('kdcB64',JSON.stringify(cart));upC()}
+function openCart(){upC();document.getElementById('cartM').classList.remove('hidden');document.getElementById('cartM').classList.add('flex')}
+function closeCart(){document.getElementById('cartM').classList.add('hidden')}
+function clearC(){cart=[];localStorage.setItem('kdcB64',JSON.stringify(cart));upC()}
+function buy(){window.open(`https://wa.me/${WA}?text=KDC ORDER ${cur.n} ${col}/${sz} $${cur.p} GCASH 09150343154`,'_blank')}
+function chkG(){if(!cart.length){alert('Empty pa boss!');return}let m=cart.map(c=>c.n+" "+c.c+"/"+c.s).join('%0A');let t=cart.reduce((a,b)=>a+b.p,0);window.open(`https://wa.me/${WA}?text=KDC MALL GCASH CHECKOUT%0A${m}%0ATotal $${t}%0AGCASH 09150343154`,'_blank')}
+function chkP(){let m=cart.map(c=>c.n).join('%0A');let t=cart.reduce((a,b)=>a+b.p,0);window.open(`https://wa.me/${WA}?text=PAYONEER CHECKOUT $${t}%0A${m}%0Abrodix8@gmail.com`,'_blank')}
+render();upC();
+</script></body></html>
