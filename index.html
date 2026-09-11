@@ -1,72 +1,54 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KDC BLACK COLLECTABLE</title>
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KDC BLACK COLLECTABLE</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}body{background:#000;color:#fff;font-family:Arial,Helvetica,sans-serif}
-.top{ background:#0a0a0a; color:#666; text-align:center; padding:10px; font-size:10px; letter-spacing:2px; border-bottom:1px solid #111}
-.nav{max-width:1200px;margin:0 auto;padding:20px;display:flex;justify-content:space-between;align-items:center}
-.logo{font-weight:900;font-size:28px;letter-spacing:3px}.cart{border:1px solid #333;padding:8px 16px;border-radius:20px;font-size:11px;font-weight:900}
-.hero{text-align:center;padding:40px 20px}
-.badge{display:inline-block;background:#111;border:1px solid #222;padding:8px 14px;border-radius:8px;transform:rotate(-3deg);margin-bottom:20px}
-.badge b{color:#ff6600}.hero h1{font-size:56px;line-height:0.9;letter-spacing:4px;font-weight:900}.hero p{color:#555;margin-top:12px;font-size:11px;letter-spacing:3px}
-.btns{margin-top:24px;display:flex;gap:10px;justify-content:center}
-.btn{background:#fff;color:#000;padding:12px 24px;border-radius:8px;font-weight:900;font-size:12px;border:none;cursor:pointer}
-.btn2{background:transparent;color:#fff;border:1px solid #333;padding:12px 24px;border-radius:8px;font-weight:900;font-size:12px;cursor:pointer}
-.shop{max-width:1200px;margin:0 auto;padding:20px}
-.shop h2{font-size:12px;letter-spacing:2px;margin-bottom:16px;color:#666}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-@media(min-width:768px){.grid{grid-template-columns:1fr 1fr 1fr}}
-.card{background:#0a0a0a;border:1px solid #151515;border-radius:12px;overflow:hidden;cursor:pointer}
-.card img{width:100%;height:220px;object-fit:cover;background:#111;display:block}
-.card .info{padding:12px;text-align:center;background:#0a0a0a}
-.card .name{font-size:10px;font-weight:900;letter-spacing:1px}.card .price{font-size:10px;color:#666;margin-top:4px}
-.card .tag{position:absolute;top:8px;left:8px;background:#ff6600;color:#000;font-size:7px;font-weight:900;padding:3px 6px;border-radius:4px}
-.wrap{position:relative}
-.modal{position:fixed;inset:0;background:rgba(0,0,0,0.9);display:none;align-items:center;justify-content:center;z-index:99;padding:16px}
-.modal.open{display:flex}.box{background:#111;border:1px solid #222;border-radius:16px;max-width:380px;width:100%;overflow:hidden}
-.box img{width:100%;height:300px;object-fit:cover}.pad{padding:16px}.sizes{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-top:12px}
-.sz{border:1px solid #333;padding:8px;text-align:center;border-radius:20px;font-size:11px;cursor:pointer}.sz.on{background:#fff;color:#000;font-weight:900}
-.act{margin-top:16px;display:grid;gap:8px}.act button{padding:14px;border-radius:24px;font-weight:900;font-size:11px;border:none;cursor:pointer}
-.w{background:#fff;color:#000}.g{background:#0070f3;color:#fff}.o{background:#ff5500;color:#fff}
-.cartBox{background:#111;border:1px solid #222;border-radius:16px;max-width:400px;width:100%;padding:20px;max-height:90vh;overflow:auto}
-.item{ background:#000;border:1px solid #222;border-radius:10px;padding:10px;display:flex;justify-content:space-between;margin-top:8px;font-size:11px}
-.foot{margin-top:40px;background:#0a0a0a;border-top:1px solid #111;padding:24px;text-align:center;color:#333;font-size:10px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#000;color:#fff;font-family:Arial}
+.top{background:#0a0a0a;color:#444;text-align:center;padding:10px;font-size:9px;letter-spacing:2px;border-bottom:1px solid #111}
+.nav{display:flex;justify-content:space-between;padding:16px;max-width:1200px;margin:0 auto}
+.logo{font-weight:900;font-size:24px;letter-spacing:3px}
+.cart{border:1px solid #222;padding:8px 14px;border-radius:20px;font-size:11px;font-weight:900}
+.hero{text-align:center;padding:30px 20px}
+.hero h1{font-size:44px;line-height:.9;letter-spacing:3px;font-weight:900}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:1100px;margin:20px auto;padding:0 12px}
+@media(min-width:700px){.grid{grid-template-columns:1fr 1fr 1fr}}
+.card{background:#0a0a0a;border:1px solid #151515;border-radius:12px;overflow:hidden}
+.card .img{height:200px;background:#111;display:flex;align-items:center;justify-content:center;font-size:40px}
+.card .info{padding:10px;text-align:center}
+.name{font-size:9px;font-weight:900}
+.price{font-size:9px;color:#555}
+.m{position:fixed;inset:0;background:rgba(0,0,0,.9);display:none;align-items:center;justify-content:center;z-index:9;padding:12px}
+.m.on{display:flex}
+.b{background:#111;border:1px solid #222;border-radius:14px;max-width:360px;width:100%;padding:16px}
+.bt{width:100%;padding:12px;border-radius:22px;font-weight:900;font-size:11px;border:none;margin-top:8px}
+.w{background:#fff;color:#000}.bl{background:#0070f3;color:#fff}.or{background:#ff5500;color:#fff}
+.sz{display:inline-block;border:1px solid #333;padding:7px 12px;border-radius:20px;margin:4px 2px;font-size:11px}
+.sz.on{background:#fff;color:#000;font-weight:900}
 </style></head><body>
-<div class="top">FREE SHIPPING OVER $100 • RETURNS 30 DAYS • BLACK COLLECTABLE DROP</div>
-<div class="nav"><div class="logo">🔥 KDC</div><div class="cart" onclick="openCart()">🛒 CART <span id="cc">0</span> • $<span id="ct">0</span></div></div>
-<div class="hero">
-<div class="badge"><b>🔥 FIRE</b> EDITION<br><span style="font-size:7px;color:#666">OCT 2024 — LIMITED DROP</span></div>
-<h1>NO FEAR<br><span style="color:#ff6600">NO LIMITS</span></h1>
-<p>BORN IN THE STREETS. BUILT WITHOUT LIMITS.</p>
-<div class="btns"><button class="btn" onclick="document.getElementById('s').scrollIntoView({behavior:'smooth'})">SHOP COLLECTION →</button><button class="btn2">LOOKBOOK</button></div>
-</div>
-<div id="s" class="shop"><h2>🔥 FEATURED DROP — 06 PIECES • BLACK COLLECTABLE • PURE BLACK EDITION</h2><div id="grid" class="grid"></div></div>
-<div class="foot"><b style="color:#fff">KDC BLACK COLLECTABLE</b><br><br>GCASH 09150343154 • PAYONEER brodix8@gmail.com • WA 639150343154<br>PURO BLACK • COLLECTABLE • LIMITED • NO FEAR NO LIMITS</div>
-
-<div id="m" class="modal"><div class="box"><div style="position:relative"><img id="mi" src=""><div style="position:absolute;top:10px;left:10px;background:#ff6600;color:#000;font-size:7px;font-weight:900;padding:4px 7px;border-radius:4px">NEW • BLACK • COLLECTABLE</div><div onclick="closeM()" style="position:absolute;top:10px;right:10px;background:#000;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer">✕</div></div><div class="pad"><div id="mn" style="font-weight:900;font-size:13px"></div><div id="mp" style="color:#666;font-size:11px;margin-top:4px"></div><div style="margin-top:12px;font-size:9px;color:#666;letter-spacing:1px">SIZE — COLLECTABLE FIT</div><div class="sizes"><div class="sz" onclick="ps(this,'XS')">XS</div><div class="sz" onclick="ps(this,'S')">S</div><div class="sz on" onclick="ps(this,'M')">M</div><div class="sz" onclick="ps(this,'L')">L</div><div class="sz" onclick="ps(this,'XL')">XL</div></div><div class="act"><button class="w" onclick="add()">🛒 ADD TO CART — BLACK COLLECTABLE</button><button class="g" onclick="og()">📱 ORDER GCASH 09150343154 + WA</button><button class="o" onclick="op()">🌍 PAYONEER brodix8@gmail.com</button></div></div></div></div>
-
-<div id="cm" class="modal"><div class="cartBox"><div style="display:flex;justify-content:space-between"><b>🛒 CART — BLACK COLLECTABLE</b><span onclick="closeC()" style="cursor:pointer">✕</span></div><div id="ci" style="margin-top:12px"></div><div style="margin-top:16px;border-top:1px solid #222;padding-top:12px;display:flex;justify-content:space-between;font-weight:900"><span>TOTAL</span><span id="ctot">$0</span></div><div class="act"><button class="g" onclick="cg()">📱 CHECKOUT GCASH 09150343154</button><button class="o" onclick="cp()">🌍 PAYONEER brodix8@gmail.com</button></div></div></div>
-
+<div class="top">FREE SHIPPING OVER $100 • BLACK COLLECTABLE • PURE BLACK</div>
+<div class="nav"><div class="logo">🔥 KDC BLACK</div><div class="cart" onclick="oc()">🛒 <span id="cc">0</span> • $<span id="cp">0</span></div></div>
+<div class="hero"><h1>NO FEAR<br><span style="color:#ff6600">NO LIMITS</span></h1><p style="color:#444;margin-top:10px;font-size:10px;letter-spacing:3px">KDC BLACK COLLECTABLE • 06 PIECES</p></div>
+<div style="text-align:center;color:#555;font-size:10px;letter-spacing:2px">🔥 FEATURED DROP — 06 PIECES • BLACK EDITION</div>
+<div id="g" class="grid"></div>
+<div style="text-align:center;padding:20px;color:#333;font-size:9px;border-top:1px solid #111;margin-top:20px">KDC BLACK<br>GCASH 09150343154 • PAYONEER brodix8@gmail.com • WA 639150343154</div>
+<div id="mod" class="m"><div class="b"><div style="display:flex;justify-content:space-between"><b id="mn" style="font-size:12px"></b><span onclick="cm()">✕</span></div><div id="mi" style="height:180px;background:#0a0a0a;margin-top:10px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:60px"></div><div id="mpr" style="font-size:11px;color:#666;margin-top:8px"></div><div style="margin-top:10px"><span class="sz" onclick="ss(this,'XS')">XS</span><span class="sz" onclick="ss(this,'S')">S</span><span class="sz on" onclick="ss(this,'M')">M</span><span class="sz" onclick="ss(this,'L')">L</span><span class="sz" onclick="ss(this,'XL')">XL</span></div><button class="bt w" onclick="ad()">🛒 ADD TO CART</button><button class="bt bl" onclick="og()">📱 GCASH 09150343154</button><button class="bt or" onclick="op()">🌍 PAYONEER brodix8@gmail.com</button></div></div>
+<div id="cmod" class="m"><div class="b"><div style="display:flex;justify-content:space-between"><b>CART</b><span onclick="ccM()">✕</span></div><div id="ci" style="margin-top:10px"></div><div style="display:flex;justify-content:space-between;margin-top:12px;font-weight:900;border-top:1px solid #222;padding-top:10px"><span>TOTAL</span><span id="ct">$0</span></div><button class="bt bl" onclick="cg()">📱 GCASH 09150343154</button><button class="bt or" onclick="cpg()">🌍 PAYONEER</button></div></div>
 <script>
-let cur=null,sz='M',cart=JSON.parse(localStorage.getItem('kdcPureBlack')||'[]');const WA="639150343154";
-const items=[
-{n:"KDC OVERSIZED HOODIE • BLACK",p:98,i:"https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600"},
-{n:"UTILITY CARGO PANTS • BLACK",p:110,i:"https://images.unsplash.com/photo-1542272604-787c3835535d?w=600"},
-{n:"KDC BUCKET HAT • BLACK",p:42,i:"https://images.unsplash.com/photo-1533827432537-70133748f5c8?w=600"},
-{n:"FLAME GRAPHIC TEE • BLACK",p:48,i:"https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600"},
-{n:"CHUNKY SNEAKERS • BLACK",p:145,i:"https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600"},
-{n:"TACTICAL SLING BAG • BLACK",p:65,i:"https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=600"}
-];
-function render(){document.getElementById('grid').innerHTML=items.map((x,k)=>`<div class="card" onclick="openM(${k})"><div class="wrap"><div class="tag">NEW</div><img src="${x.i}"></div><div class="info"><div class="name">${x.n}</div><div class="price">$${x.p}.00 • BLACK COLLECTABLE</div></div></div>`).join('')}
-function openM(k){cur=items[k];document.getElementById('mi').src=cur.i;document.getElementById('mn').innerText=cur.n;document.getElementById('mp').innerText="$"+cur.p+".00 • PURE BLACK • COLLECTABLE • FREE SHIPPING $100+";document.getElementById('m').classList.add('open')}
-function closeM(){document.getElementById('m').classList.remove('open')}
-function ps(el,s){sz=s;document.querySelectorAll('.sz').forEach(b=>b.classList.remove('on'));el.classList.add('on')}
-function add(){cart.push({n:cur.n,p:cur.p,s:sz});localStorage.setItem('kdcPureBlack',JSON.stringify(cart));up();closeM();openCart()}
-function up(){let t=cart.length, tot=cart.reduce((a,b)=>a+b.p,0);document.getElementById('cc').innerText=t;document.getElementById('ct').innerText=tot;document.getElementById('ctot').innerText="$"+tot+".00";document.getElementById('ci').innerHTML=cart.length?cart.map((c,i)=>`<div class="item"><div><b style="font-size:10px">${c.n}</b><br><span style="color:#666">BLACK / ${c.s} $${c.p}</span></div><div onclick="rm(${i})" style="cursor:pointer;color:#666">✕</div></div>`).join(''):`<div style="text-align:center;padding:20px;color:#333;font-size:11px">Cart empty - click any BLACK collectable item!</div>`}
-function rm(i){cart.splice(i,1);localStorage.setItem('kdcPureBlack',JSON.stringify(cart));up()}
-function openCart(){up();document.getElementById('cm').classList.add('open')}
-function closeC(){document.getElementById('cm').classList.remove('open')}
-function og(){window.open(`https://wa.me/${WA}?text=KDC BLACK COLLECTABLE ORDER%0A${cur.n} BLACK ${sz} $${cur.p}%0AGCash 09150343154`,'_blank')}
-function op(){window.open(`https://wa.me/${WA}?text=KDC BLACK PAYONEER%0A${cur.n} BLACK ${sz} $${cur.p} USD%0Abrodix8@gmail.com`,'_blank')}
-function cg(){if(!cart.length){alert('Empty pa boss!');return}let m=cart.map(c=>`• ${c.n} BLACK ${c.s} $${c.p}`).join('%0A');let t=cart.reduce((a,b)=>a+b.p,0);window.open(`https://wa.me/${WA}?text=KDC BLACK COLLECTABLE CHECKOUT GCASH%0A${m}%0ATotal $${t}%0AGCash 09150343154`,'_blank')}
-function cp(){if(!cart.length){alert('Empty!');return}let m=cart.map(c=>`• ${c.n}`).join('%0A');let t=cart.reduce((a,b)=>a+b.p,0);window.open(`https://wa.me/${WA}?text=BLACK PAYONEER CHECKOUT $${t}%0A${m}%0Abrodix8@gmail.com`,'_blank')}
+let cur=null,s='M',cart=JSON.parse(localStorage.getItem('kdcPure')||'[]');const W="639150343154";
+const it=[{n:"001 HOODIE BLACK",p:98,e:"🧥",d:"HEAVY 500G"},{n:"002 CARGO PANT BLACK",p:110,e:"👖",d:"RIPSTOP"},{n:"003 BUCKET HAT BLACK",p:42,e:"🎩",d:"TACTICAL"},{n:"004 GRAPHIC TEE BLACK",p:48,e:"👕",d:"HEAVYWEIGHT"},{n:"005 SNEAKER BLACK",p:145,e:"👟",d:"TRIPLE BLACK"},{n:"006 SLING BAG BLACK",p:65,e:"👜",d:"MODULAR"}];
+function render(){document.getElementById('g').innerHTML=it.map((x,i)=>`<div class="card" onclick="om(${i})"><div class="img">${x.e}</div><div class="info"><div class="name">${x.n}</div><div class="price">${x.d} • $${x.p} • BLACK</div></div></div>`).join('')}
+function om(i){cur=it[i];document.getElementById('mn').innerText=cur.n;document.getElementById('mi').innerText=cur.e;document.getElementById('mpr').innerText="$"+cur.p+".00 • "+cur.d+" • BLACK COLLECTABLE";document.getElementById('mod').classList.add('on')}
+function cm(){document.getElementById('mod').classList.remove('on')}
+function ss(el,v){s=v;document.querySelectorAll('.sz').forEach(b=>b.classList.remove('on'));el.classList.add('on')}
+function ad(){cart.push({n:cur.n,p:cur.p,s:s});localStorage.setItem('kdcPure',JSON.stringify(cart));up();cm();oc()}
+function up(){let t=cart.length,tt=cart.reduce((a,b)=>a+b.p,0);document.getElementById('cc').innerText=t;document.getElementById('cp').innerText=tt;document.getElementById('ct').innerText="$"+tt+".00";document.getElementById('ci').innerHTML=cart.length?cart.map((c,i)=>`<div style="background:#000;border:1px solid #222;border-radius:8px;padding:8px;display:flex;justify-content:space-between;margin-top:6px;font-size:10px"><div><b>${c.n}</b><br><span style="color:#666">BLACK ${c.s} $${c.p}</span></div><span onclick="rm(${i})">✕</span></div>`).join(''):`<div style="text-align:center;color:#333;padding:20px;font-size:11px">Empty pa boss!</div>`}
+function rm(i){cart.splice(i,1);localStorage.setItem('kdcPure',JSON.stringify(cart));up()}
+function oc(){up();document.getElementById('cmod').classList.add('on')}
+function ccM(){document.getElementById('cmod').classList.remove('on')}
+function og(){window.open(`https://wa.me/${W}?text=KDC BLACK ${cur.n} BLACK ${s} $${cur.p} GCASH 09150343154`,'_blank')}
+function op(){window.open(`https://wa.me/${W}?text=KDC BLACK PAYONEER ${cur.n} BLACK ${s} $${cur.p} USD brodix8@gmail.com`,'_blank')}
+function cg(){if(!cart.length){alert('Empty pa!');return}let m=cart.map(c=>`• ${c.n} BLACK ${c.s} $${c.p}`).join('%0A');let t=cart.reduce((a,b)=>a+b.p,0);window.open(`https://wa.me/${W}?text=KDC BLACK GCASH CHECKOUT%0A${m}%0ATotal $${t}%0AGCASH 09150343154`,'_blank')}
+function cpg(){if(!cart.length){alert('Empty!');return}let m=cart.map(c=>`• ${c.n}`).join('%0A');let t=cart.reduce((a,b)=>a+b.p,0);window.open(`https://wa.me/${W}?text=BLACK PAYONEER CHECKOUT $${t}%0A${m}%0Abrodix8@gmail.com`,'_blank')}
 render();up();
 </script></body></html>
