@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>KDC - NO FEAR NO LIMITS</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+<style>body{font-family:'Space Grotesk',sans-serif;background:#070707;color:#fff}.font-anton{font-family:'Anton',sans-serif}</style></head>
+<body>
+<nav class="fixed top-0 w-full z-50 bg-black/90 border-b border-white/10 p-4 flex justify-between"><span class="font-anton text-xl">KDC FIRE</span><span class="text-[9px] opacity-40">SUKAT CM</span></nav>
+<section class="pt-28 pb-10 px-4 text-center"><h1 class="font-anton text-[20vw] leading-none">KDC</h1><h2 class="font-anton text-4xl">NO FEAR <span class="text-red-600">NO LIMITS</span></h2>
+<div class="max-w-[480px] mx-auto mt-8 bg-zinc-900 border border-white/10 rounded-2xl p-4">
+<p class="font-anton text-sm mb-3">📏 SUKAT (CM)</p>
+<div class="grid grid-cols-4 gap-2 text-[10px]">
+<div class="bg-black rounded-lg p-2.5"><p class="font-bold">SIZE</p><p class="mt-1 opacity-60">S<br>M<br>L<br>XL</p></div>
+<div class="bg-black rounded-lg p-2.5"><p class="font-bold">CHEST</p><p class="mt-1 opacity-60">50cm<br>53cm<br>56cm<br>59cm</p></div>
+<div class="bg-black rounded-lg p-2.5"><p class="font-bold">LENGTH</p><p class="mt-1 opacity-60">68cm<br>70cm<br>72cm<br>74cm</p></div>
+<div class="bg-black rounded-lg p-2.5"><p class="font-bold">SHOULDER</p><p class="mt-1 opacity-60">44cm<br>46cm<br>48cm<br>50cm</p></div>
+</div></div>
+<a href="#shop" class="inline-block mt-6 px-8 py-3 bg-white text-black font-bold text-xs">SHOP NA →</a></section>
+<section id="shop" class="max-w-7xl mx-auto px-4 pb-20"><div id="grid" class="grid grid-cols-1 md:grid-cols-3 gap-4"></div></section>
+<div id="modal" class="fixed inset-0 z-[100] hidden"><div class="absolute inset-0 bg-black/80" onclick="closeM()"></div><div class="relative min-h-screen flex items-center justify-center p-4"><div class="bg-zinc-900 border border-white/10 w-full max-w-[400px] rounded-2xl p-5">
+<div class="flex justify-between mb-4"><div><p id="mName" class="font-bold"></p><p id="mPrice" class="text-xs opacity-60"></p><p class="text-[9px] opacity-40 mt-1">S 50/68/44 | M 53/70/46 | L 56/72/48 | XL 59/74/50 cm</p></div><button onclick="closeM()" class="w-8 h-8 bg-white/10 rounded-full">X</button></div>
+<div class="flex gap-2 mb-4"><button onclick="selS('S')" class="sBtn flex-1 py-2.5 border border-white/20 rounded-xl text-sm">S</button><button onclick="selS('M')" class="sBtn flex-1 py-2.5 bg-white text-black rounded-xl font-bold text-sm">M</button><button onclick="selS('L')" class="sBtn flex-1 py-2.5 border border-white/20 rounded-xl text-sm">L</button><button onclick="selS('XL')" class="sBtn flex-1 py-2.5 border border-white/20 rounded-xl text-sm">XL</button></div>
+<div class="grid grid-cols-2 gap-2 mb-3"><button id="gBtn" onclick="selP('gcash')" class="py-3 rounded-xl bg-white text-black font-bold text-xs">GCash</button><button id="pBtn" onclick="selP('payoneer')" class="py-3 rounded-xl border border-white/20 opacity-60 text-xs">Payoneer</button></div>
+<div id="pInfo" class="p-3 rounded-xl bg-white/5 border border-white/10 text-[11px] mb-3"></div>
+<input id="cName" placeholder="Full Name" class="w-full bg-black border border-white/10 rounded-xl px-4 py-3 text-sm mb-2">
+<input id="cAddr" placeholder="Address" class="w-full bg-black border border-white/10 rounded-xl px-4 py-3 text-sm mb-2">
+<input id="cContact" placeholder="Contact" class="w-full bg-black border border-white/10 rounded-xl px-4 py-3 text-sm mb-2">
+<input id="cRef" placeholder="GCash Ref No." class="w-full bg-black border border-white/10 rounded-xl px-4 py-3 text-sm mb-3">
+<button onclick="pay()" class="w-full py-4 bg-red-600 rounded-xl font-bold text-sm">PAY → WHATSAPP</button>
+</div></div></div>
+<script>
+const products=[{id:'01',name:'FLAME CAT',price:78},{id:'02',name:'STREET GHOST',price:82},{id:'03',name:'SKULL RIDER',price:85},{id:'04',name:'NEON WOLF',price:80},{id:'05',name:'ROBO FOX',price:88},{id:'06',name:'NIGHT CRAWLER',price:75}];
+let selProd=products[2],selSize='M',selPay='gcash';
+function render(){document.getElementById('grid').innerHTML=products.map(p=>`<div class="bg-zinc-900 border border-white/10 rounded-[18px] p-4 cursor-pointer" onclick="openM('${p.id}')"><div class="h-[200px] bg-gradient-to-br from-red-900 to-black rounded-xl flex items-center justify-center text-4xl mb-3">${p.id}</div><div class="flex justify-between"><p class="font-bold text-sm">${p.name}</p><p class="text-xs">$${p.price}</p></div><p class="text-[10px] opacity-40 mt-1">P${p.price*58} final | S M L XL</p></div>`).join('')}
+function openM(id){selProd=products.find(x=>x.id===id);document.getElementById('mName').innerText=selProd.id+' '+selProd.name;document.getElementById('mPrice').innerText='$'+selProd.price+' • P'+(selProd.price*58);upd();document.getElementById('modal').classList.remove('hidden')}
+function closeM(){document.getElementById('modal').classList.add('hidden')}
+function selS(s){selSize=s;document.querySelectorAll('.sBtn').forEach(b=>{b.className='sBtn flex-1 py-2.5 border border-white/20 rounded-xl text-sm';if(b.innerText===s)b.className='sBtn flex-1 py-2.5 bg-white text-black rounded-xl font-bold text-sm'})}
+function selP(m){selPay=m;document.getElementById('gBtn').className=m==='gcash'?'py-3 rounded-xl bg-white text-black font-bold text-xs':'py-3 rounded-xl border border-white/20 opacity-60 text-xs';document.getElementById('pBtn').className=m==='payoneer'?'py-3 rounded-xl bg-white text-black font-bold text-xs':'py-3 rounded-xl border border-white/20 opacity-60 text-xs';upd()}
+function upd(){const php=selProd.price*58;document.getElementById('pInfo').innerHTML=selPay==='gcash'?`GCash 09150343154 Raul Elorcha<br>P${php} final (Size ${selSize})`:`Payoneer brodix8@gmail.com<br>$${selProd.price} final (Size ${selSize})`}
+function pay(){const n=document.getElementById('cName').value;const a=document.getElementById('cAddr').value;const c=document.getElementById('cContact').value;const r=document.getElementById('cRef').value;if(!n||!a){alert('Name & Address needed');return}const php=selProd.price*58;const total=selPay==='gcash'?`P${php} GCash`:`$${selProd.price} Payoneer`;const msg=`KDC ORDER%0AProduct: ${selProd.id} ${selProd.name}%0ASize: ${selSize} (${selSize==='S'?50:selSize==='M'?53:selSize==='L'?56:59}cm chest)%0ATotal: ${total}%0ARef: ${r}%0AName: ${n}%0AAddress: ${a}%0AContact: ${c}`;window.open(`https://wa.me/639150343154?text=${msg}`,'_blank')}
+render();upd();
+</script></body></html>
